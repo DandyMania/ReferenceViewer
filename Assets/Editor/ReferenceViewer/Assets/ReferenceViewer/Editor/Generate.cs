@@ -17,8 +17,8 @@ namespace ReferenceViewer
 
         private static readonly string[] ignoreTypes =
         {
-           // "Rigidbody",
-           // "Rigidbody2D",
+            "Rigidbody",
+            "Rigidbody2D",
             "Transform",
             "Object"
         };
@@ -117,7 +117,7 @@ namespace ReferenceViewer
 
                             for (var s = 0; s < stateMachineCount; s++)
                             {
-                                SearchMotion(animator, stateMachine, assetData);
+                                SearchMotion(animator, stateMachine.stateMachines[s].stateMachine, assetData);
                             }
                         }
                         break;
